@@ -5,13 +5,13 @@
 soong_namespace {
 	imports: [
 		"device/oneplus/sm8350-common",
-		"hardware/qcom-caf/sm8350",
-		"hardware/qcom-caf/wlan",
 		"hardware/oplus",
+		"hardware/qcom/display",
+                "hardware/qcom/display/libdebug",
+		"hardware/qcom/display/gralloc",
 		"vendor/qcom/opensource/commonsys/display",
 		"vendor/qcom/opensource/commonsys-intf/display",
 		"vendor/qcom/opensource/dataservices",
-		"vendor/qcom/opensource/display",
 	],
 }
 
@@ -1272,11 +1272,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libqti-perfd-client.so"],
-			shared_libs: ["libcutils", "libutils", "liblog", "vendor.qti.hardware.perf@2.2", "libhidlbase", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcutils", "libutils", "liblog", "libhidlbase", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libqti-perfd-client.so"],
-			shared_libs: ["libcutils", "libutils", "liblog", "vendor.qti.hardware.perf@2.2", "libhidlbase", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcutils", "libutils", "liblog", "libhidlbase", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -1293,11 +1293,11 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/libqti-perfd.so"],
-			shared_libs: ["libcutils", "liblog", "libutils", "libxml2", "libqti-util", "libhidlbase", "vendor.qti.hardware.perf@2.0", "libbase", "libthermalclient", "libqti-perfd-client", "libperfconfig", "libperfgluelayer", "libdisplayconfig.qti", "libperfioctl", "vendor.qti.memory.pasrmanager@1.1", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcutils", "liblog", "libutils", "libxml2", "libqti-util", "libhidlbase", "libbase", "libthermalclient", "libqti-perfd-client", "libperfconfig", "libperfgluelayer", "libdisplayconfig.qti", "libperfioctl", "vendor.qti.memory.pasrmanager@1.1", "libc++", "libc", "libm", "libdl", ],
 		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libqti-perfd.so"],
-			shared_libs: ["libcutils", "liblog", "libutils", "libxml2", "libqti-util", "libhidlbase", "vendor.qti.hardware.perf@2.0", "libbase", "libthermalclient", "libqti-perfd-client", "libperfconfig", "libperfgluelayer", "libdisplayconfig.qti", "libperfioctl", "vendor.qti.memory.pasrmanager@1.1", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libcutils", "liblog", "libutils", "libxml2", "libqti-util", "libhidlbase", "libbase", "libthermalclient", "libqti-perfd-client", "libperfconfig", "libperfgluelayer", "libdisplayconfig.qti", "libperfioctl", "vendor.qti.memory.pasrmanager@1.1", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -6424,7 +6424,7 @@ cc_prebuilt_library_shared {
 	},
 	compile_multilib: "64",
 	prefer: true,
-	soc_specific: true,
+	system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -8824,7 +8824,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/odm/lib64/libwvhidl.so"],
-			shared_libs: ["libcrypto_shim", "android.hardware.drm@1.0", "android.hardware.drm@1.1", "android.hardware.drm@1.2", "android.hardware.drm@1.3", "android.hidl.memory@1.0", "libbase", "libcrypto", "libhidlbase", "libhidlmemory", "liblog", "libprotobuf-cpp-lite-3.9.1-vendorcompat", "libutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["android.hardware.drm@1.0", "android.hardware.drm@1.1", "android.hardware.drm@1.2", "android.hardware.drm@1.3", "android.hidl.memory@1.0", "libbase", "libcrypto", "libhidlbase", "libhidlmemory", "liblog", "libprotobuf-cpp-lite-3.9.1-vendorcompat", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -8841,7 +8841,7 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/odm/lib64/mediadrm/libwvdrmengine.so"],
-			shared_libs: ["libcrypto_shim", "libbase", "libcrypto", "liblog", "libprotobuf-cpp-lite-3.9.1-vendorcompat", "libstagefright_foundation", "libutils", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["libbase", "libcrypto", "liblog", "libprotobuf-cpp-lite-3.9.1-vendorcompat", "libstagefright_foundation", "libutils", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -9471,7 +9471,7 @@ cc_prebuilt_binary {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/hw/vendor.qti.hardware.perf@2.2-service"],
-			shared_libs: ["liblog", "libcutils", "libbase", "libutils", "libhardware_legacy", "libhardware", "libhidlbase", "vendor.qti.hardware.perf@2.0", "vendor.qti.hardware.perf@2.1", "vendor.qti.hardware.perf@2.2", "libperfconfig", "libperfgluelayer", "libqti-perfd-client", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["liblog", "libcutils", "libbase", "libutils", "libhardware_legacy", "libhardware", "libhidlbase", "libperfconfig", "libperfgluelayer", "libqti-perfd-client", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
