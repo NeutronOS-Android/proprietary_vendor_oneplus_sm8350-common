@@ -505,7 +505,6 @@ PRODUCT_PACKAGES += \
     deviceInfoServiceModuleNr \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
-    android.hardware.gnss@2.1-impl-qti \
     com.dsi.ant@1.0-impl \
     vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
@@ -883,8 +882,6 @@ PRODUCT_PACKAGES += \
     oplus-ims-ext \
     qcrilhook \
     vendor.qti.ims.factory-V2.0-java \
-    android.hardware.gnss@2.1-service-qti.xml \
-    vendor.qti.gnss@4.0-service.xml \
     vendor.qti.hardware.servicetracker@1.2-service.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     ATFWD-daemon \
@@ -898,7 +895,6 @@ PRODUCT_PACKAGES += \
     feature_enabler_client \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.gatekeeper@1.0-service-qti \
-    android.hardware.gnss@2.1-service-qti \
     android.hardware.keymaster@4.1-service-qti \
     qconfigservice \
     qcrilNrd \
