@@ -1281,6 +1281,7 @@ cc_prebuilt_library_shared {
 	},
 	compile_multilib: "both",
 	prefer: true,
+	check_elf_files: false,
 	soc_specific: true,
 }
 
@@ -1302,6 +1303,7 @@ cc_prebuilt_library_shared {
 	},
 	compile_multilib: "both",
 	prefer: true,
+	check_elf_files: false,
 	soc_specific: true,
 }
 
@@ -8829,6 +8831,7 @@ cc_prebuilt_library_shared {
 	},
 	compile_multilib: "64",
 	prefer: true,
+	check_elf_files: false,
 	device_specific: true,
 }
 
@@ -8847,6 +8850,7 @@ cc_prebuilt_library_shared {
 	compile_multilib: "64",
 	relative_install_path: "mediadrm",
 	prefer: true,
+	check_elf_files: false,
 	device_specific: true,
 }
 
@@ -9181,6 +9185,7 @@ cc_prebuilt_binary {
 		none: true,
 	},
 	prefer: true,
+	allow_undefined_symbols: true,
 	soc_specific: true,
 }
 
@@ -9480,6 +9485,7 @@ cc_prebuilt_binary {
 	},
 	prefer: true,
 	relative_install_path: "hw",
+	check_elf_files: false,
 	soc_specific: true,
 }
 
@@ -9826,6 +9832,7 @@ cc_prebuilt_binary {
 		none: true,
 	},
 	prefer: true,
+	allow_undefined_symbols: true,
 	soc_specific: true,
 }
 
@@ -10013,6 +10020,7 @@ cc_prebuilt_binary {
 		none: true,
 	},
 	prefer: true,
+        allow_undefined_symbols: true,
 	soc_specific: true,
 }
 
