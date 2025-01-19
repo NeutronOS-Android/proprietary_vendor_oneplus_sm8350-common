@@ -692,7 +692,14 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@3.0.so \
     vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so \
-    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.latency@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.1.so
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.latency@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.1.so \
+    vendor/oneplus/sm8350-common/proprietary/odm/lib/libbluetooth_audio_extend_factory_client.so:$(TARGET_COPY_OUT_ODM)/lib/libbluetooth_audio_extend_factory_client.so \
+    vendor/oneplus/sm8350-common/proprietary/odm/lib/vendor.oplus.hardware.bluetooth_audio_extend@2.1.so:$(TARGET_COPY_OUT_ODM)/lib/vendor.oplus.hardware.bluetooth_audio_extend@2.1.so \
+    vendor/oneplus/sm8350-common/proprietary/odm/lib64/libbluetooth_audio_extend_factory_client.so:$(TARGET_COPY_OUT_ODM)/lib64/libbluetooth_audio_extend_factory_client.so \
+    vendor/oneplus/sm8350-common/proprietary/odm/lib64/vendor.oplus.hardware.bluetooth_audio_extend@2.1.so:$(TARGET_COPY_OUT_ODM)/lib64/vendor.oplus.hardware.bluetooth_audio_extend@2.1.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib/libsoc_helper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsoc_helper.so \
+    vendor/oneplus/sm8350-common/proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.fm@1.0.so
+
 
 PRODUCT_PACKAGES += \
     libfastcvopt \
